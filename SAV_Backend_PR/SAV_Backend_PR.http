@@ -1,0 +1,6 @@
+@SAV_Backend_PR_HostAddress = http://localhost:5206
+
+GET {{SAV_Backend_PR_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
