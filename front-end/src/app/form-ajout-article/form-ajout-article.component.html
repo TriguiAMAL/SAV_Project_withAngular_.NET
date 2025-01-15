@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row vh-100 align-items-center">
+      <div class="col-lg-4 offset-lg-4 col-md-8 offset-md-2 col-10 offset-1">
+        <div class="rounded-4 border-0 shadow-lg bg-white" style="min-height:450px;">
+          <div class="d-flex justify-content-start align-items-center">
+            <div class="p-5 w-100">
+
+
+
+
+<div class="container">
+    <h2>Ajouter un Article</h2>
+    <form [formGroup]="addArticleForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Champ Name -->
+      <div class="form-group">
+        <label for="name">Nom de l'Article</label>
+        <input type="text" id="name" formControlName="name" class="form-control" placeholder="Entrez le nom de l'article" required />
+      </div>
+      
+      <!-- Champ Description -->
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" formControlName="description" class="form-control" rows="3" placeholder="Entrez la description de l'article" required></textarea>
+      </div>
+      
+      <!-- Champ Garantie Duration -->
+      <div class="form-group">
+        <label for="garantieDuration">Durée de Garantie (mois)</label>
+        <input type="number" id="garantieDuration" formControlName="garantieDuration" class="form-control" placeholder="Entrez la durée de garantie en mois" required />
+      </div>
+      
+      <!-- Champ ClientId -->
+      <div class="form-group">
+        <label for="clientId">Client ID</label>
+        <input type="text" id="clientId" formControlName="clientId" class="form-control" placeholder="Entrez l'ID du client" required />
+      </div>
+      
+      <!-- Champ Date Added -->
+      <div class="form-group">
+        <label for="dateAdded">Date d'ajout</label>
+        <input type="date" id="dateAdded" formControlName="dateAdded" class="form-control" required />
+      </div>
+      
+      <!-- Bouton de soumission -->
+      <button type="submit" class="btn btn-primary">Ajouter l'Article</button>
+    </form>
+  </div>
+
+  
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
