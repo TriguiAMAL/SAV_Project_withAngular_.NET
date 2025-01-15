@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +20,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormAjoutArticleComponent } from './form-ajout-article/form-ajout-article.component';
+import { PieceRechangeDetailsComponent } from './piece-rechange-details/piece-rechange-details.component';
+import { FormPieceRechangeDetailsComponent } from './form-piece-rechange-details/form-piece-rechange-details.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +32,9 @@ import { FormAjoutArticleComponent } from './form-ajout-article/form-ajout-artic
     RegistrationComponent,
     HomeComponent,
     ArticleVenduComponent,
-    FormAjoutArticleComponent
+    FormAjoutArticleComponent,
+    PieceRechangeDetailsComponent,
+    FormPieceRechangeDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +52,9 @@ import { FormAjoutArticleComponent } from './form-ajout-article/form-ajout-artic
       positionClass: 'toast-top-center', // Position des notifications
       preventDuplicates: true, // Empêche les notifications dupliquées
     }),
+   
+    FormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
