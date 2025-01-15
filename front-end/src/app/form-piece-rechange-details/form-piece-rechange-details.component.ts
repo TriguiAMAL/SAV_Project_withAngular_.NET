@@ -22,8 +22,10 @@ export class FormPieceRechangeDetailsComponent {
       console.log('Form is valid, submitting...');
       if (this.PieceRechangeService.formData.PieceId == 0) {
         this.insertRecord(form);
+        this.PieceRechangeService.refreshList();
       } else {
         this.updateRecord(form);
+        this.PieceRechangeService.refreshList();
       }
     } else {
       console.log('Form is invalid.');
@@ -37,6 +39,7 @@ export class FormPieceRechangeDetailsComponent {
         next: res => {
           this.PieceRechangeService.list = res as PieceRechangeDetails[]
           this.PieceRechangeService.resetForm(form)
+          this.PieceRechangeService.refreshList();
           this.toastr.success('Inserted successfully', 'Rechange Detail Register')
         },
         error: err => { console.log(err) }
@@ -48,6 +51,7 @@ export class FormPieceRechangeDetailsComponent {
         next: res => {
           this.PieceRechangeService.list = res as PieceRechangeDetails[]
           this.PieceRechangeService.resetForm(form)
+          this.PieceRechangeService.refreshList();
           this.toastr.info('Updated successfully', 'Payment Detail Register')
         },
         error: err => { console.log(err) }

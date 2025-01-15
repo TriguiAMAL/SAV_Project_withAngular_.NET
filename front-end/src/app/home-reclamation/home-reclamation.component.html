@@ -1,0 +1,9 @@
+<div class="reclamation-container">
+  <div class="reclamation-card" *ngFor="let reclamation of reclamations">
+    <h3>{{ reclamation.sujet }}</h3>
+    <p>{{ reclamation.description }}</p>
+    <p><strong>Date:</strong> {{ reclamation.dateReclamation | date }}</p>
+    <p><strong>Statut:</strong> {{ reclamation.statut }}</p>
+  </div>
+</div>
+<button (click)="navigateToFormReclamation()" class="btn btn-primary">Passer une réclamation</button>

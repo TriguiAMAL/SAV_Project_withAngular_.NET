@@ -1,0 +1,21 @@
+<div class="form-reclamation-container">
+  <form (ngSubmit)="submitReclamation()" #reclamationForm="ngForm">
+    <div class="form-group">
+      <label for="sujet">Sujet</label>
+      <input type="text" id="sujet" [(ngModel)]="reclamation.sujet" name="sujet" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" [(ngModel)]="reclamation.description" name="description" required class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="articleId">Article ID</label>
+      <input type="text" id="articleId" [(ngModel)]="reclamation.articleId" name="articleId" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="dateReclamation">Date de Réclamation</label>
+      <input type="text" id="dateReclamation" [value]="reclamation.dateReclamation" readonly class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!reclamationForm.valid">Créer</button>
+  </form>
+</div>

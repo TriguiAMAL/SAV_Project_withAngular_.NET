@@ -22,15 +22,16 @@ export class PieceRechangeDetailsComponent implements OnInit {
   }
 
   onDelete(id: number) {
-    if (confirm('Are you sure to delete this record?'))
+    if (confirm('Are you sure to delete this record?')) {
       this.PieceRechangeService.deletePieceRechangeDetails(id)
         .subscribe({
           next: res => {
-            this.PieceRechangeService.list = res as PieceRechangeDetails[]
-            this.toastr.error('Deleted successfully', 'Payment Detail Register')
+            this.PieceRechangeService.refreshList(); // Rafraîchir la liste après suppression
+            this.toastr.error('Deleted successfully', 'Piece Rechange Details');
           },
-          error: err => { console.log(err) }
-        })
+          error: err => { console.log(err); }
+        });
+    }
   }
 
 }

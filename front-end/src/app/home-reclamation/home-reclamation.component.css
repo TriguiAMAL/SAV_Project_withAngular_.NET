@@ -1,0 +1,29 @@
+.reclamation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .reclamation-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reclamation-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .reclamation-card p {
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .reclamation-card strong {
+    color: #000;
+  }
+  

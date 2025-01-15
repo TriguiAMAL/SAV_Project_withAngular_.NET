@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 export class PieceRechangeService {
 
   //url: string = environment.apiBaseUrl + '/PieceDetail' 
-  url = 'http://localhost:5206/api/PieceDetail'
+  url = 'https://localhost:7081/api/PieceDetail'
   list: PieceRechangeDetails[] = [];
   formData: PieceRechangeDetails = new PieceRechangeDetails()
   formSubmitted: boolean = false;

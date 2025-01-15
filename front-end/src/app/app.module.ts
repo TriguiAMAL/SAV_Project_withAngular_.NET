@@ -10,12 +10,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PieceRechangeDetailsComponent } from './piece-rechange-details/piece-rechange-details.component';
 import { FormPieceRechangeDetailsComponent } from './form-piece-rechange-details/form-piece-rechange-details.component';
-
+import { HomeReclamationComponent } from './home-reclamation/home-reclamation.component';
+import { FormReclamationComponent } from './form-reclamation/form-reclamation.component';
+import { ReactiveFormsModule } from '@angular/forms'; 
 @NgModule({
   declarations: [
     AppComponent,
     PieceRechangeDetailsComponent,
-    FormPieceRechangeDetailsComponent
+    FormPieceRechangeDetailsComponent,
+    HomeReclamationComponent,
+    FormReclamationComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,7 @@ import { FormPieceRechangeDetailsComponent } from './form-piece-rechange-details
       preventDuplicates: true, // Empêche les notifications dupliquées
 
     }), // ToastrModule added
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
