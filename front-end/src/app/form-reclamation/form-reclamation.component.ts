@@ -28,7 +28,13 @@ export class FormReclamationComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.reclamation.clientId = params['clientId'] || '';
     });
+  
+    // Récupération de l'articleId depuis les paramètres de requête
+    this.route.queryParams.subscribe(queryParams => {
+      this.reclamation.articleId = queryParams['articleId'] || '';
+    });
   }
+  
 
   submitReclamation(): void {
     this.reclamationService.createReclamation(this.reclamation).subscribe(

@@ -1,0 +1,54 @@
+/* Style pour la table */
+table.mat-table {
+  background-color: white; /* Fond blanc */
+  width: 100%; /* Largeur de la table à 100% de son parent */
+  border-collapse: collapse; /* Pour éviter les espaces entre les bordures */
+}
+
+/* Style des cellules */
+.mat-cell, .mat-header-cell {
+  padding: 16px; /* Un peu plus d'espace dans les cellules */
+  font-size: 14px; /* Taille de police ajustée */
+}
+
+/* Style des colonnes */
+.mat-header-row {
+  background-color: #f1f1f1; /* Fond clair pour l'en-tête */
+  font-weight: bold;
+}
+
+/* Amélioration du style des bordures */
+.mat-table, .mat-header-row, .mat-row {
+  border: 1px solid #e0e0e0; /* Bordure légère autour des cellules */
+}
+
+/* Largeur des colonnes */
+.mat-column-articleId,
+.mat-column-name,
+.mat-column-description,
+.mat-column-garantieDuration,
+.mat-column-dateAdded,
+.mat-column-action {
+  width: 16%; /* Ajuster la largeur des colonnes à votre convenance */
+}
+
+/* Style pour les boutons dans la table */
+button.mat-raised-button {
+  min-width: 150px; /* Largeur minimale du bouton */
+  font-size: 14px; /* Taille de police des boutons */
+  padding: 8px 16px; /* Espacement intérieur des boutons */
+  text-transform: none; /* Empêcher la transformation automatique en majuscules */
+}
+/* Style pour le bouton "Passer une réclamation" */
+button.mat-raised-button {
+  background-color: white !important; /* Fond blanc pour le bouton */
+  color: #3f51b5; /* Couleur du texte (par exemple, bleu) */
+  border: 1px solid #3f51b5; /* Bordure bleue pour le bouton */
+  text-transform: none; /* Empêcher la transformation automatique en majuscules */
+  padding: 8px 16px; /* Espacement intérieur du bouton */
+}
+
+button.mat-raised-button:hover {
+  background-color: #f1f1f1; /* Fond gris clair au survol */
+  border-color: #3f51b5; /* Bordure bleue au survol */
+}

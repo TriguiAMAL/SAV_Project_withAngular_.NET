@@ -1,3 +1,8 @@
+<app-sidebar-client></app-sidebar-client>
+<br>
+<br>
+<br>
+
 <div class="reclamation-container">
   <div class="reclamation-card" *ngFor="let reclamation of reclamations">
     <h3>{{ reclamation.sujet }}</h3>
@@ -6,4 +11,4 @@
     <p><strong>Statut:</strong> {{ reclamation.statut }}</p>
   </div>
 </div>
-<button (click)="navigateToFormReclamation()" class="btn btn-primary">Passer une réclamation</button>
+

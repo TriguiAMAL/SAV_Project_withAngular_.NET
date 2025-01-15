@@ -1,0 +1,55 @@
+<div class="bg-body-secondary text-center py-5 rounded-2">
+    <h1 class="dispay-6 fw-bold">Liste de clients </h1>
+  </div>
+
+
+<div class="client-container">
+    <h1>Liste des clients</h1>
+  
+    <table mat-table [dataSource]="clients" class="mat-elevation-z8" *ngIf="clients.length > 0; else noData">
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="fullName">
+        <th mat-header-cell *matHeaderCellDef>fullName</th>
+        <td mat-cell *matCellDef="let client">{{ client.fullName}}</td>
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>email</th>
+        <td mat-cell *matCellDef="let client">{{ client.email }}</td>
+      </ng-container>
+  
+      
+     
+
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let client">
+          <!-- Icon for Update -->
+          <button mat-icon-button color="primary" (click)="onUpdate(client)">
+            <i class="fas fa-edit"></i>
+          </button>
+          
+          <!-- Icon for Delete -->
+          <button mat-icon-button color="warn" (click)="onDelete(client)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </ng-container>
+      
+      
+
+ 
+
+      <!-- Header and Row Definitions -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <ng-template #noData>
+      <p>Aucun client  trouvé.</p>
+    </ng-template>
+  </div>
+  

@@ -31,9 +31,14 @@ signIn() {
 
     this.authservice.login(loginData).subscribe({
       next: (response) => {
-        this.toastr.success('Login successful!', 'Success');
-        console.log('Response:', response);
-        this.router.navigate(['/home'])
+        console.log('Response:', response); // Debugging
+        const clientId = response.clientId; // Utilisez "clientId" avec une minuscule 'c'
+        if (clientId) {
+          this.toastr.success('Login successful!', 'Success');
+          this.router.navigate([`/article-client/${clientId}`]);
+        } else {
+          this.toastr.error('Client ID is missing in response.', 'Error');
+        }
       },
       error: (error) => {
         this.toastr.error('Invalid email or password.', 'Error');
@@ -44,6 +49,8 @@ signIn() {
     this.toastr.warning('Please fill in all fields correctly.', 'Warning');
   }
 }
+
+
 
 
 }

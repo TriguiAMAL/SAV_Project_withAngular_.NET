@@ -31,6 +31,9 @@ import { MatListModule } from '@angular/material/list';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReclamationAdminComponent } from './reclamation-admin/reclamation-admin.component';
 import { InterventionComponent } from './intervention/intervention.component';
+import { ArticleClientComponent } from './article-client/article-client.component';
+import { SidebarClientComponent } from './sidebar-client/sidebar-client.component';
+import { GererClientsComponent } from './gerer-clients/gerer-clients.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { InterventionComponent } from './intervention/intervention.component';
     TemplateComponent,
     DashboardComponent,
     ReclamationAdminComponent,
-    InterventionComponent
+    InterventionComponent,
+    ArticleClientComponent,
+    SidebarClientComponent,
+    GererClientsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +75,8 @@ import { InterventionComponent } from './intervention/intervention.component';
       positionClass: 'toast-top-center', // Position des notifications
       preventDuplicates: true, // Empêche les notifications dupliquées
     }), 
-    FormsModule, // Ajoutez FormsModule si vous l'utilisez
+    FormsModule, 
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

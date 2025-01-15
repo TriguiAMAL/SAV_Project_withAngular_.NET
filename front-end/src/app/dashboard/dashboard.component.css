@@ -1,0 +1,65 @@
+/* Assurez-vous que le body et html prennent toute la largeur et hauteur */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  /* Assure que les bordures et le padding ne dépassent pas la largeur/hauteur */
+  }
+  
+  /* Style de la navbar */
+  .navbar {
+    background-color: #343a40;  /* Couleur de fond sombre pour la navbar */
+    padding: 10px 0;  /* Moins d'espace vertical pour la navbar */
+    width: 100%;  /* La navbar prend toute la largeur de la page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;  /* Centrer les éléments dans la navbar */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin: 0 15px;  /* Espacement entre les éléments de la navbar */
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar a:hover {
+    background-color: #495057;  /* Fond au survol */
+  }
+  
+  .navbar .active {
+    background-color: #caf0f8;  /* Couleur de fond active pour le lien sélectionné */
+    color: white;
+  }
+  
+  /* Style du contenu */
+  .content {
+    margin-top: 70px;  /* Décale le contenu pour qu'il ne soit pas caché derrière la navbar fixe */
+    padding: 20px;
+    width: 100%;  /* Assurez-vous que le contenu occupe toute la largeur */
+    box-sizing: border-box;
+  }
+  
+  router-outlet {
+    display: block;
+  }
+  
