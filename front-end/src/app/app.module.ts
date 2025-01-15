@@ -30,6 +30,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReclamationAdminComponent } from './reclamation-admin/reclamation-admin.component';
+import { ArticleClientComponent } from './article-client/article-client.component';
+import { SidebarClientComponent } from './sidebar-client/sidebar-client.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { ReclamationAdminComponent } from './reclamation-admin/reclamation-admin
     FormReclamationComponent,
     TemplateComponent,
     DashboardComponent,
-    ReclamationAdminComponent
+    ReclamationAdminComponent,
+    ArticleClientComponent,
+    SidebarClientComponent
   ],
   imports: [
     BrowserModule,

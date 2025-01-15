@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <!-- Sidebar (fixed) -->
+  <app-sidebar-client [clientId]="clientId"></app-sidebar-client>
+
+  <!-- Contenu principal -->
+  <div class="content">
+    <div class="container mt-4">
+      <h2>Articles du client</h2>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Article ID</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Durée de garantie</th>
+            <th>Date d'ajout</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let article of articles">
+            <td>{{ article.articleId }}</td>
+            <td>{{ article.name }}</td>
+            <td>{{ article.description }}</td>
+            <td>{{ article.garantieDuration }} mois</td>
+            <td>{{ article.dateAdded | date: 'shortDate' }}</td>
+            <td>
+              <button
+                class="btn btn-primary"
+                (click)="navigateToFormReclamation(article.articleId)"
+              >
+                Passer une réclamation
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

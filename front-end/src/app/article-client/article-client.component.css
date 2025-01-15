@@ -1,0 +1,29 @@
+.container {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    text-align: left;
+  }
+  
+  button {
+    margin: 0 auto;
+  }
+  .container-fluid {
+    display: flex;
+  }
+  
+  app-sidebar-client {
+    width: 250px;
+    position: fixed;
+    height: 100vh;
+  }
+  
+  .content {
+    margin-left: 250px;  /* Pour laisser de l'espace à la sidebar */
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  

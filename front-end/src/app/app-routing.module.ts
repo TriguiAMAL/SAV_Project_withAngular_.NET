@@ -11,54 +11,63 @@ import { ArticleVenduComponent } from './article-vendu/article-vendu.component';
 import { FormAjoutArticleComponent } from './form-ajout-article/form-ajout-article.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReclamationAdminComponent } from './reclamation-admin/reclamation-admin.component';
+import { ArticleClientComponent } from './article-client/article-client.component';
+import { PieceRechangeDetailsComponent } from './piece-rechange-details/piece-rechange-details.component';
 
 const routes: Routes = [
   {
     path:'login',
-    
     component:LoginComponent
   },
 
   {
     path:'registration',
-    
     component:RegistrationComponent
   },
 
 
   {
     path:'home',
-    
     component:HomeComponent
   },
 
   {
     path:'article-vendu',
-    
     component:ArticleVenduComponent
   },
-
   {
     path:'formulaireAjoutArticle',
-    
     component:FormAjoutArticleComponent
   },
 
   {
     path:'reclamationAdmin',
-    
     component:ReclamationAdminComponent
+  },
+  {
+    path:'piecerechange',
+    component:PieceRechangeDetailsComponent
   },
 
   {
     path:'dashboard',
-    
     component:DashboardComponent
   },
 
-  { path: 'home-reclamation/:clientId', component: HomeReclamationComponent },
-  { path: 'form-reclamation/:clientId', component: FormReclamationComponent },  
-  { path: '**', redirectTo: '/home-reclamation/:clientId' },
+  { 
+    path: 'home-reclamation/:clientId', 
+    component: HomeReclamationComponent 
+  },
+  { 
+    path: 'form-reclamation/:clientId', 
+    component: FormReclamationComponent 
+  },  
+  { path: 'article-client/:clientId', component: ArticleClientComponent },
+
+  { 
+    path: '**', 
+    redirectTo: '/home-reclamation/:clientId' 
+  },
 
   {
     path:'**',

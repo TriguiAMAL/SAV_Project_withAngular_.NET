@@ -27,4 +27,8 @@ export class ArticleService {
   createArticle(article: Article): Observable<any> {
     return this.http.post(this.apiUrl, article);  // Envoi de l'article via POST
   }
+  getArticlesByClientId(clientId: string): Observable<Article[]> {
+    return this.http.get<Article[]>(`${this.apiUrl}/client/${clientId}`);
+  }
+  
 }
