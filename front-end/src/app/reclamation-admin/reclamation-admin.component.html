@@ -1,1 +1,62 @@
-<p>reclamation-admin works!</p>
+<div class="reclamations-container">
+    <h1>Liste des Réclamations</h1>
+  
+    <table mat-table [dataSource]="reclamations" class="mat-elevation-z8" *ngIf="reclamations.length > 0; else noData">
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let reclamation">{{ reclamation.id }}</td>
+      </ng-container>
+  
+      <!-- Client Column -->
+      <ng-container matColumnDef="clientId">
+        <th mat-header-cell *matHeaderCellDef>Client</th>
+        <td mat-cell *matCellDef="let reclamation">{{ reclamation.clientId }}</td>
+      </ng-container>
+  
+      <!-- Description Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let reclamation">{{ reclamation.description }}</td>
+      </ng-container>
+  
+      <!-- Date Column -->
+      <ng-container matColumnDef="dateReclamation">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let reclamation">{{ reclamation.dateReclamation | date: 'short' }}</td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let reclamation">{{ reclamation.statut }}</td>
+      </ng-container>
+  
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let reclamation">
+          <button mat-button color="primary" (click)="onUpdate(reclamation)">Update</button>
+          <button mat-button color="warn" (click)="onDelete(reclamation.id)">Delete</button>
+          
+        </td>
+      </ng-container>
+
+ <ng-container matColumnDef="Inervention">
+        <th mat-header-cell *matHeaderCellDef>Intervention</th>
+        <td mat-cell *matCellDef="let reclamation">
+          <button mat-button color="primary" (click)="passerAIntervention(reclamation)">passer  l'intervention</button>
+        </td>
+      </ng-container>
+
+      <!-- Header and Row Definitions -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <ng-template #noData>
+      <p>Aucune réclamation trouvée.</p>
+    </ng-template>
+  </div>
+  

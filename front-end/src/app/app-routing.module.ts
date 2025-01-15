@@ -11,6 +11,7 @@ import { ArticleVenduComponent } from './article-vendu/article-vendu.component';
 import { FormAjoutArticleComponent } from './form-ajout-article/form-ajout-article.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReclamationAdminComponent } from './reclamation-admin/reclamation-admin.component';
+import { InterventionComponent } from './intervention/intervention.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,11 @@ const routes: Routes = [
     component:ReclamationAdminComponent
   },
 
+  {
+    path:'intervention',
+    
+    component:InterventionComponent
+  },
   {
     path:'dashboard',
     

@@ -9,8 +9,8 @@ import { Reclamation } from 'src/models/reclamation';
 })
 export class ReclamationService {
 
-  private apiUrl = 'https://localhost:7081/api/Reclamations/client'; 
-  private apiUrlpost = 'https://localhost:7081/api/Reclamations';
+  private apiUrl = 'http://localhost:5187/api/Reclamations/client'; 
+  private apiUrlpost = 'http://localhost:5187/api/Reclamations';
 
   constructor(private http: HttpClient) { }
 
@@ -21,5 +21,21 @@ export class ReclamationService {
   createReclamation(reclamation: any): Observable<any> {
     return this.http.post(`${this.apiUrlpost}`, reclamation);
   }
+
+  getAllReclamations():Observable<Reclamation[]>{
+    return this.http.get<Reclamation[]>(this.apiUrlpost);
+  }
+  
+
+  deleteReclamation(id: number): Observable<void> {
+    const url = `${this.apiUrlpost}/${id}`; // URL complète avec l'identifiant
+    return this.http.delete<void>(url); // Requête HTTP DELETE
+  }
+
+  updateReclamation(id: number, updatedReclamation: Reclamation): Observable<Reclamation> {
+    const url = `${this.apiUrlpost}/${id}`; // URL complète avec l'identifiant
+    return this.http.put<Reclamation>(url, updatedReclamation); // Requête HTTP PUT
+  }
+  
   
 } 
