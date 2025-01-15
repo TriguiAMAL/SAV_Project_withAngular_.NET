@@ -5,6 +5,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleVenduComponent } from './article-vendu/article-vendu.component';
 import { FormAjoutArticleComponent } from './form-ajout-article/form-ajout-article.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReclamationAdminComponent } from './reclamation-admin/reclamation-admin.component';
 
 const routes: Routes = [
   {
@@ -36,6 +38,24 @@ const routes: Routes = [
     path:'formulaireAjoutArticle',
     
     component:FormAjoutArticleComponent
+  },
+
+  {
+    path:'reclamationAdmin',
+    
+    component:ReclamationAdminComponent
+  },
+
+  {
+    path:'dashboard',
+    
+    component:DashboardComponent
+  },
+
+  {
+    path:'**',
+    
+    component:HomeComponent
   },
 
 ];

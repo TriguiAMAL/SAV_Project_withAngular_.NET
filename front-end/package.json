@@ -10,12 +10,9 @@
   },
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "@angular/animations": "^16.1.0",
+    
     "@angular/cdk": "^16.2.12",
-=======
     "@angular/animations": "^16.2.12",
->>>>>>> ad5d093454540d523236a37aa087b664d286a321
     "@angular/common": "^16.1.0",
     "@angular/compiler": "^16.1.0",
     "@angular/core": "^16.1.0",

@@ -22,9 +22,13 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FormAjoutArticleComponent } from './form-ajout-article/form-ajout-article.component';
 import { PieceRechangeDetailsComponent } from './piece-rechange-details/piece-rechange-details.component';
 import { FormPieceRechangeDetailsComponent } from './form-piece-rechange-details/form-piece-rechange-details.component';
-
-
-
+import { TemplateComponent } from './template/template.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReclamationAdminComponent } from './reclamation-admin/reclamation-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +38,10 @@ import { FormPieceRechangeDetailsComponent } from './form-piece-rechange-details
     ArticleVenduComponent,
     FormAjoutArticleComponent,
     PieceRechangeDetailsComponent,
-    FormPieceRechangeDetailsComponent
+    FormPieceRechangeDetailsComponent,
+    TemplateComponent,
+    DashboardComponent,
+    ReclamationAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +53,14 @@ import { FormPieceRechangeDetailsComponent } from './form-piece-rechange-details
     MatIconModule,
     MatDialogModule,
     HttpClientModule,
+  
+   
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatListModule,
+    MatButtonModule,
     BrowserAnimationsModule, // Ajoutez ce module
     ToastrModule.forRoot({ // Configuration de Toastr
       timeOut: 3000, // Durée d'affichage des notifications
