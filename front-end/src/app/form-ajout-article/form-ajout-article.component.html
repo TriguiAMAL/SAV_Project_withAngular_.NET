@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row vh-400 align-items-center">
+    <!-- Conteneur central -->
+    <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12">
+      <div class="rounded-4 border-0 shadow-lg bg-white custom-container" style="min-height:450px; width: 80%; max-width: 900px; margin: 0 auto;">
+        <div class="d-flex justify-content-start align-items-center">
+          <div class="p-5 w-100">
+            <!-- Styles CSS personnalisés -->
+            <style>
+              .custom-container {
+                width: 80%;
+                max-width: 900px;
+                margin: 0 auto;
+              }
+              .form-control {
+                margin-bottom: 15px;
+              }
+              .btn-primary {
+                width: 100%;
+              }
+            </style>
+
+            <!-- Formulaire -->
+            <h2 class="text-center mb-4">Ajouter un Article</h2>
+            <form [formGroup]="addArticleForm" (ngSubmit)="onSubmit()">
+              <!-- Champ Nom -->
+              <div class="form-group">
+                <label for="name">Nom de l'Article</label>
+                <input type="text" id="name" formControlName="name" class="form-control" placeholder="Entrez le nom de l'article" required />
+              </div>
+              
+              <!-- Champ Description -->
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" formControlName="description" class="form-control" rows="3" placeholder="Entrez la description de l'article" required></textarea>
+              </div>
+              
+              <!-- Champ Durée de Garantie -->
+              <div class="form-group">
+                <label for="garantieDuration">Durée de Garantie (mois)</label>
+                <input type="number" id="garantieDuration" formControlName="garantieDuration" class="form-control" placeholder="Entrez la durée de garantie en mois" required />
+              </div>
+              
+              <!-- Champ Client ID -->
+              <div class="form-group">
+                <label for="clientId">Client ID</label>
+                <input type="text" id="clientId" formControlName="clientId" class="form-control" placeholder="Entrez l'ID du client" required />
+              </div>
+              
+              <!-- Champ Date d'Ajout -->
+              <div class="form-group">
+                <label for="dateAdded">Date d'ajout</label>
+                <input type="date" id="dateAdded" formControlName="dateAdded" class="form-control" required />
+              </div>
+              
+              <!-- Bouton Soumettre -->
+              <button type="submit" class="btn btn-primary">Ajouter l'Article</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

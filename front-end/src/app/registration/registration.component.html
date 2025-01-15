@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row vh-100 align-items-center">
+    <div class="col-lg-4 offset-lg-4 col-md-8 offset-md-2 col-10 offset-1">
+      <div class="rounded-4 border-0 shadow-lg bg-white" style="min-height:450px;">
+        <div class="d-flex justify-content-start align-items-center">
+          <div class="p-5 w-100">
+
+
+
+
+<div class="mb-4 h2 text-success">
+  Sign up
+</div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Full Name" formControlName="fullName">
+    <div class="error-feedback" *ngIf="hasDisplayableError('fullName') && form.controls.fullName.hasError('required')">
+      Please enter your full name.
+    </div>
+  </div>
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email">
+    <div class="error-feedback" *ngIf="hasDisplayableError('email')">
+      <div *ngIf="form.controls.email.hasError('required')">
+        Please enter your email address.
+      </div>
+      <div *ngIf="form.controls.email.hasError('email')">
+        Please enter a valid email address.
+      </div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Password" formControlName="password">
+    <div class="error-feedback" *ngIf="hasDisplayableError('password')">
+    
+      
+    </div>
+  </div>
+  <div class="mb-3">
+    <input class="form-control bg-body-secondary" placeholder="Confirm Password" formControlName="confirmPassword">
+    <div class="error-feedback" 
+    *ngIf="hasDisplayableError('confirmPassword') && form.controls.confirmPassword.hasError('passwordMismatch')">
+      Passwords doesn't match.
+    </div>
+  </div>
+  <div class="mt-4">
+    <button type="submit" class="btn btn-success w-100 rounded-3">
+      Register
+    </button>
+  </div>
+</form>
+
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
